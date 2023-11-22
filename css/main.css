@@ -19,16 +19,18 @@
      margin: 10px 0 5px 0;
  }
 
- /* знайшли елемент футера по його унікальному ідентифікатору 
-      footer */
- #footer {
-     /* задаємо верхню межу елемента: ширина лінії, 
-      тип лінії, колір лінії */
-     border-top: 1px solid #dee2e6;
-     /* задаємо внутрішню відстань елемента до верхнього краю */
-     padding-top: 10px;
- }
 
+ #footer {
+    padding-top: 10px;
+}
+
+#footer::before {
+    content: "";
+    display: block;
+    border-top: 1px solid #dee2e6;
+    width: 98.5%; /* Змініть значення відсотків на те, яке вам потрібно */
+    margin: 0 auto; /* Це допомагає вирівняти лінію по центру */
+}
 
  /* Groups Selector */
  #group-selector {
