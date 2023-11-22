@@ -11,7 +11,10 @@
     <!-- Include Styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
 
 </head>
 
@@ -30,9 +33,9 @@
             <div class="col-sm-4 d-flex pt-3 pb-3" id="group-selector">
                 <label for="group"><strong>Група:</strong></label>
                 <select class="form-select" id="group">
-                  <option value="">Усі Студенти</option>
-                  <option value="">МтМ - 21, Літвінов Дмитро (№ 254)</option>
-                  <option value="">МтМ - 22, Віталій Сидоренко (№ 410)</option>
+                    <option value="">Усі Студенти</option>
+                    <option value="">МтМ - 21, Літвінов Дмитро (№ 254)</option>
+                    <option value="">МтМ - 22, Віталій Сидоренко (№ 410)</option>
                 </select>
             </div>
         </div>
@@ -72,72 +75,117 @@
                 <a class="btn btn-primary" href="#" role="button">Додати Студента</a>
 
 
-                <div><!-- Start Students Listing -->
+                <div>
+                    <!-- Start Students Listing -->
                     <table class="table table-hover table-striped">
                         <thead>
-                            <tr>
-                                <th>№</th>
+                            <tr class="border-top">
+                                <th><a href="#">№</a></th>
                                 <th>Фото</th>
-                                <th>Прізвище</th>
-                                <th>Ім'я</th>
-                                <th>№ Білету</th>
+                                <th><a href="#">Прізвище &uarr;</a></th>
+                                <th><a href="#">Ім'я</a></th>
+                                <th><a href="#">№ Білету</a></th>
                                 <th>Дії</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><img class="rounded-circle" src="./img/image_1.jpeg" height="35" width="35" /></td>
+                                <td><a href="#">Літвінов</a></td>
+                                <td><a href="#">Дмитро</a></td>
+                                <td>2123</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-primary dropdown-toggle"
+                                            data-bs-toggle="dropdown">
+                                            Дія
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Редагувати</a>
+                                            <a class="dropdown-item" href="#">Відвідування</a>
+                                            <a class="dropdown-item" href="#">Видалити</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><img class="rounded-circle" src="./img/image_2.jpg" height="35" width="35" /></td>
+                                <td><a href="#">Сидоренко</a></td>
+                                <td><a href="#">Віталій</a></td>
+                                <td>563</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-primary dropdown-toggle"
+                                        data-bs-toggle="dropdown">
+                                            Дія
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Редагувати</a>
+                                            <a class="dropdown-item" href="#">Відвідування</a>
+                                            <a class="dropdown-item" href="#">Видалити</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><img src="./img/image_3.jpeg" height="35" width="35" /></td>
+                                <td><a href="#">Процак</a></td>
+                                <td><a href="#">Василь</a></td>
+                                <td>832</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-primary dropdown-toggle"
+                                        data-bs-toggle="dropdown">
+                                            Дія
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Редагувати</a>
+                                            <a class="dropdown-item" href="#">Відвідування</a>
+                                            <a class="dropdown-item" href="#">Видалити</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- End Students Listing -->
+
+
+
                 </div>
-                </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Буде Фото</td>
-                        <td>Літвінов</td>
-                        <td>Дмитро</td>
-                        <td>410</td>
-                        <td>Дія</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Буде Фото</td>
-                        <td>Літвінов</td>
-                        <td>Дмитро</td>
-                        <td>410</td>
-                        <td>Дія</td>
-                    </tr>
-                </tbody>
-                </table>
-                <!-- End Students Listing -->
-
 
 
             </div>
 
 
-        </div>
 
-
-
-        <!-- End Main Page Content -->
-        <!-- Start Footer -->
-        <div class="row" id="footer">
-            <div class="col-sm-12">
-                &copy; 2020 Сервіс Обліку Студентів
+            <!-- End Main Page Content -->
+            <!-- Start Footer -->
+            <div class="row" id="footer">
+                <div class="col-sm-12">
+                    &copy; 2020 Сервіс Обліку Студентів
+                </div>
             </div>
+
+            <!-- End Footer -->
         </div>
-
-        <!-- End Footer -->
-    </div>
-    <!-- End Container -->
+        <!-- End Container -->
 
 
-    <!-- Javascripts Section -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
+        <!-- Javascripts Section -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"></script>
 
 
 </body>
