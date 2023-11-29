@@ -1,5 +1,4 @@
 # 22_11
-# 22_11
 Added requirements.txt
 
 also added demo_data.json
