@@ -1,6 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+from students_2911.differ_data.differ_variables import students_list_data
+
 
 # from django.shortcuts import render
 
@@ -46,12 +48,46 @@ from django.shortcuts import render
 
 
 def demonstration_page(request):
-    return render(request, "students/demonstration.html", {})
+    students = (
+        {
+            "id": 1,
+            "first_name": "Дмитро",
+            "last_name": "Волошко",
+            "ticket": 235,
+            "image": "img/image_1.jpeg",
+        },
+        {
+            "id": 2,
+            "first_name": "Ігор",
+            "last_name": "Шевченко",
+            "ticket": 2123,
+            "image": "/img/image_2.jpg",
+        },
+    )
+
+    # breakpoint()
+    return render(request, "students/demonstration.html", {"students": students})
 
 
 # Students views
 def students_list(request):
-    return render(request, "students/index.html", {})
+    students = (
+        {
+            "id": 1,
+            "first_name": "Дмитро",
+            "last_name": "Волошко",
+            "ticket": 235,
+            "image": "img/image_1.jpeg",
+        },
+        {
+            "id": 2,
+            "first_name": "Ігор",
+            "last_name": "Шевченко",
+            "ticket": 2123,
+            "image": "img/image_2.jpg",
+        },
+    )
+    return render(request, "students/students_list.html", {"students": students})
 
 
 def students_add(request):
@@ -65,3 +101,22 @@ def students_edit(request, sid):
 
 def students_delete(request, sid):
     return HttpResponse("<h1>Delete Student %s</h1>" % sid)
+
+
+# Group views
+
+
+def groups_list(request):  # GET
+    return HttpResponse("<h1>Groups </h1>")
+
+
+def groups_list_add(request):  # POST
+    return HttpResponse("<h1>Groups Add </h1>")
+
+
+def groups_list_edit(request, gid):  # PATCH
+    return HttpResponse("<h1>Groups Edit %s</h1>" % gid)
+
+
+def groups_list_delete(request, gid):  # DELETE
+    return HttpResponse("<h1>Groups Delete %s</h1>" % gid)

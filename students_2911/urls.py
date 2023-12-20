@@ -26,5 +26,16 @@ urlpatterns = [
         "students/<int:sid>/delete/", all_views.students_delete, name="students_delete"
     ),
     # Groups url
+    path("groups_all/", all_views.groups_list, name="groups_list"),
+    path("groups/add/", all_views.groups_list_add, name="groups_list_add"),  # add
+    path(
+        "groups/<int:gid>/edit/", all_views.groups_list_edit, name="groups_list_edit"
+    ),  # edit
+    path(
+        "groups/<int:gid>/delete/",
+        all_views.groups_list_delete,
+        name="groups_list_delete",
+    ),  # delete
+    # aa66cb0e-ba3e-416a-9ae2-cc6667a6b2df
     # Journals url
 ]
