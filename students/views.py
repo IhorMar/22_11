@@ -87,7 +87,7 @@ def students_list(request):
             "image": "img/image_2.jpg",
         },
     )
-    return render(request, "students/students_list.html", {"students": students})
+    return render(request, "students/index.html", {"students": students})
 
 
 def students_add(request):
