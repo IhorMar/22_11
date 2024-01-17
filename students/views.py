@@ -46,31 +46,34 @@ from students_2911.differ_data.differ_variables import students_list_data
 #     context = {}
 #     return HttpResponse(template.render(context))
 
-
-def demonstration_page(request):
-    students = (
-        {
-            "id": 1,
-            "first_name": "Дмитро",
-            "last_name": "Волошко",
-            "ticket": 235,
-            "image": "img/image_1.jpeg",
-        },
-        {
-            "id": 2,
-            "first_name": "Ігор",
-            "last_name": "Шевченко",
-            "ticket": 2123,
-            "image": "/img/image_2.jpg",
-        },
-    )
-
-    # breakpoint()
-    return render(request, "students/demonstration.html", {"students": students})
+# def base(request):
+#     students=()
+#     render(request, "students/base.html", {"students":students})
+# def demonstration_page(request):
+#     students = (
+#         {
+#             "id": 1,
+#             "first_name": "Дмитро",
+#             "last_name": "Волошко",
+#             "ticket": 235,
+#             "image": "img/image_1.jpeg",
+#         },
+#         {
+#             "id": 2,
+#             "first_name": "Ігор",
+#             "last_name": "Шевченко",
+#             "ticket": 2123,
+#             "image": "/img/image_2.jpg",
+#         },
+#     )
+#
+#     # breakpoint()
+#     return render(request, "students/demonstration.html", {"students": students})
 
 
 # Students views
 def students_list(request):
+    # students_1 = Students.objects.all()
     students = (
         {
             "id": 1,
@@ -86,8 +89,22 @@ def students_list(request):
             "ticket": 2123,
             "image": "img/image_2.jpg",
         },
+        {
+            "id": 3,
+            "first_name": " Михайло",
+            "last_name": "Петренко",
+            "ticket": 565,
+            "image": "img/image_3.jpeg",
+        },
+        {
+            "id": 4,
+            "first_name": " Стів",
+            "last_name": "Возняк",
+            "ticket": 13,
+            "image": "img/image_4.png",
+        },
     )
-    return render(request, "students/index.html", {"students": students})
+    return render(request, "students/student_list.html", {"students": students})
 
 
 def students_add(request):
@@ -107,16 +124,35 @@ def students_delete(request, sid):
 
 
 def groups_list(request):  # GET
-    return HttpResponse("<h1>Groups </h1>")
+    groups = (
+        {
+            "id": 1,
+            "group_name": "Група_1_test",
+            "leader_group_first_name": "Волошко",
+            "leader_group_last_name": "Петро",
+        },
+        {
+            "id": 2,
+            "group_name": "Група_2_test",
+            "leader_group_first_name": "Івашко",
+            "leader_group_last_name": "Володимир",
+        },
+    )
+    return render(request, "students/groups_list.html", {"groups": groups})
 
 
-def groups_list_add(request):  # POST
-    return HttpResponse("<h1>Groups Add </h1>")
+def groups_add(request):  # POST
+    return render(request, "students/groups_list.html", {})
 
 
-def groups_list_edit(request, gid):  # PATCH
+def groups_edit(request, gid):  # PATCH
     return HttpResponse("<h1>Groups Edit %s</h1>" % gid)
 
 
-def groups_list_delete(request, gid):  # DELETE
+def groups_delete(request, gid):  # DELETE
     return HttpResponse("<h1>Groups Delete %s</h1>" % gid)
+
+
+# Journal
+def journal_list(request):
+    return HttpResponse("<h1>Journal list TEST for student -- </h1>")

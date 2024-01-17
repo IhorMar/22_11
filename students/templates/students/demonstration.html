@@ -1,16 +1,16 @@
 <div>
     <div>
         <ul>
-            {% for  student in students%}
+            {% for student in students%}
             <li>{{ student.id }}</li>
             <li>{{ student.first_name }}</li>
             <li>{{ student.last_name }}</li>
             <li>{{ student.ticket }}</li>
             <li>{{ student.image }}</li>
             {% endfor %}
-<!--            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>-->
-<!--            <li>Aliquam tincidunt mauris eu risus.</li>-->
-<!--            <li>Vestibulum auctor dapibus neque.</li>-->
+            <!--            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>-->
+            <!--            <li>Aliquam tincidunt mauris eu risus.</li>-->
+            <!--            <li>Vestibulum auctor dapibus neque.</li>-->
         </ul>
 
     </div>
@@ -28,17 +28,17 @@
     <form action="#" method="post">
         <div>
             <label for="name">Text Input:</label>
-            <input type="text" name="name" id="name" value="" tabindex="1"/>
+            <input type="text" name="name" id="name" value="" tabindex="1" />
         </div>
 
         <div>
             <h4>Radio Button Choice</h4>
 
             <label for="radio-choice-1">Choice 1</label>
-            <input type="radio" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1"/>
+            <input type="radio" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1" />
 
             <label for="radio-choice-2">Choice 2</label>
-            <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2"/>
+            <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
         </div>
 
         <div>
@@ -57,11 +57,11 @@
 
         <div>
             <label for="checkbox">Checkbox:</label>
-            <input type="checkbox" name="checkbox" id="checkbox"/>
+            <input type="checkbox" name="checkbox" id="checkbox" />
         </div>
 
         <div>
-            <input type="submit" value="Submit"/>
+            <input type="submit" value="Submit" />
         </div>
     </form>
 </div>

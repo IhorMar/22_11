@@ -21,16 +21,18 @@
 
 
  #footer {
-    padding-top: 10px;
-}
+     padding-top: 10px;
+ }
 
-#footer::before {
-    content: "";
-    display: block;
-    border-top: 1px solid #dee2e6;
-    width: 98.5%; /* Змініть значення відсотків на те, яке вам потрібно */
-    margin: 0 auto; /* Це допомагає вирівняти лінію по центру */
-}
+ #footer::before {
+     content: "";
+     display: block;
+     border-top: 1px solid #dee2e6;
+     width: 98.5%;
+     /* Змініть значення відсотків на те, яке вам потрібно */
+     margin: 0 auto;
+     /* Це допомагає вирівняти лінію по центру */
+ }
 
  /* Groups Selector */
  #group-selector {
@@ -40,5 +42,3 @@
  #group-selector label {
      line-height: calc(1.5em + .75rem + 2px);
  }
-
- 
