@@ -7,7 +7,7 @@ from students_2911.differ_data.differ_variables import students_list_data
 # from django.shortcuts import render
 
 
-# Create your views here.
+# Create your views here. path
 # def students_main(request):
 #     return HttpResponse(
 #         "<h1>Some text in the browser</h1><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>")
@@ -155,4 +155,5 @@ def groups_delete(request, gid):  # DELETE
 
 # Journal
 def journal_list(request):
+    # breakpoint()
     return HttpResponse("<h1>Journal list TEST for student -- </h1>")
