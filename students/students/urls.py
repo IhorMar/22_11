@@ -1,9 +1,7 @@
-from django.contrib import admin
 from django.urls import path
 
 # from students.students import views as students_views
 from . import views as students_views
-
 
 urlpatterns = [
     # Students urls

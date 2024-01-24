@@ -40,7 +40,9 @@ from django.urls import include, path
 # ]
 
 urlpatterns = [
+    # admin urls
     path("admin/", admin.site.urls),
+    # others urls
     path("students/", include("students.students.urls")),
     path("journal/", include("students.journal.urls")),
     path("groups/", include("students.groups.urls")),

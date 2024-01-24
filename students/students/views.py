@@ -11,28 +11,28 @@ def students_list(request):
             "first_name": "Дмитро",
             "last_name": "Волошко",
             "ticket": 235,
-            "image": "img/image_1.jpeg",
+            "image": "/media/img/image_1.jpeg",
         },
         {
             "id": 2,
             "first_name": "Ігор",
             "last_name": "Шевченко",
             "ticket": 2123,
-            "image": "img/image_2.jpg",
+            "image": "/media/img/image_2.jpg",
         },
         {
             "id": 3,
             "first_name": " Михайло",
             "last_name": "Петренко",
             "ticket": 565,
-            "image": "img/image_3.jpeg",
+            "image": "/media/img/image_3.jpeg",
         },
         {
             "id": 4,
             "first_name": " Петро",
             "last_name": "Ворон",
             "ticket": 13,
-            "image": "img/image_4.png",
+            "image": "/media/img/image_4.png",
         },
     )
     return render(request, "students/student_list.html", {"students": students})
