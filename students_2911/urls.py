@@ -1,7 +1,6 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 
-from students import views as work_views
 
 # urlpatterns = [
 #     # path(
@@ -42,18 +41,7 @@ from students import views as work_views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    # Students urls
-    path("", work_views.students_list, name="home"),
-    path("students/add/", work_views.students_add, name="students_add"),
-    path("students/<int:sid>/edit/", work_views.students_edit, name="students_edit"),
-    path(
-        "students/<int:sid>/delete/", work_views.students_delete, name="students_delete"
-    ),
-    # Groups urls
-    path("groups/", work_views.groups_list, name="groups"),
-    path("groups/add/", work_views.groups_add, name="groups_add"),
-    path("groups/<int:gid>/edit/", work_views.groups_edit, name="groups_edit"),
-    path("groups/<int:gid>/delete/", work_views.groups_delete, name="groups_delete"),
-    # Journals url
-    path("journal/", work_views.journal_list, name="journal"),
+    path("students/", include("students.students.urls")),
+    path("journal/", include("students.journal.urls")),
+    path("groups/", include("students.groups.urls")),
 ]

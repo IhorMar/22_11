@@ -98,8 +98,8 @@ def students_list(request):
         },
         {
             "id": 4,
-            "first_name": " Стів",
-            "last_name": "Возняк",
+            "first_name": " Петро",
+            "last_name": "Ворон",
             "ticket": 13,
             "image": "img/image_4.png",
         },
