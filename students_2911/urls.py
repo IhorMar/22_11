@@ -43,7 +43,7 @@ urlpatterns = [
     # admin urls
     path("admin/", admin.site.urls),
     # others urls
-    path("students/", include("students.students.urls")),
-    path("journal/", include("students.journal.urls")),
-    path("groups/", include("students.groups.urls")),
+    path("", include("students.students.urls")),
+    path("", include("students.journal.urls")),
+    path("", include("students.groups.urls")),
 ]

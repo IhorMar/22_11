@@ -4,5 +4,5 @@ from . import views as journal_views
 
 urlpatterns = [
     # Journals url
-    path("", journal_views.journal_list, name="journal"),
+    path("journal/", journal_views.journal_list, name="journal"),
 ]

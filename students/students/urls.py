@@ -6,7 +6,13 @@ from . import views as students_views
 urlpatterns = [
     # Students urls
     path("", students_views.students_list, name="home"),
-    path("add/", students_views.students_add, name="students_add"),
-    path("<int:sid>/edit/", students_views.students_edit, name="students_edit"),
-    path("<int:sid>/delete/", students_views.students_delete, name="students_delete"),
+    path("students/add/", students_views.students_add, name="students_add"),
+    path(
+        "students/<int:sid>/edit/", students_views.students_edit, name="students_edit"
+    ),
+    path(
+        "students/<int:sid>/delete/",
+        students_views.students_delete,
+        name="students_delete",
+    ),
 ]
